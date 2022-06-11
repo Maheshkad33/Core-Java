@@ -1,0 +1,19 @@
+INDEX VERSION 1.131+D:\MorningStar\Training\JPA\Workspace\.metadata\.plugins\org.eclipse.jdt.core
+186722859.index
+241463320.index
+4209890066.index
+2915611346.index
+2154221205.index
+3566664676.index
+1482989936.index
+3357518881.index
+261759352.index
+2875646564.index
+4196686175.index
+2765888941.index
+1288402773.index
+1865797976.index
+697644133.index
+1443916932.index
+4040390503.index
+3010781399.index

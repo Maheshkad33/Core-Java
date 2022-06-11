@@ -1,0 +1,32 @@
+package com.morningstar;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.morningstar.entities.Student;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		Student student = new Student(106, "Raju", 49);
+
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPA-PU");
+		EntityManager em = factory.createEntityManager();
+
+		em.getTransaction().begin();
+		em.persist(student);
+		em.getTransaction().commit();
+		//select statement on DB
+		Student Student2 = em.find(Student.class, student.getStudentId());
+		System.out.println("Id: " + Student2.getStudentId() + " Name: "+ Student2.getStudentName()+" Score: " + Student2.getStudentScore());
+		
+		Student2.setStudentScore(56);
+		
+		em.getTransaction().begin();
+		em.merge(Student2);	
+		em.getTransaction().commit();
+	
+	}
+
+}

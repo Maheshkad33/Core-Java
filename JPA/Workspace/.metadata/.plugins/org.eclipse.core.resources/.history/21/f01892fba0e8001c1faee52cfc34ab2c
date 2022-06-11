@@ -1,0 +1,11 @@
+package com.morningstar;
+
+import com.morningstar.entities.Customer;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+		Customer cust = new Customer(101, "Akshay", "Tambade", "Akshay@morning.com", 12345678);
+	}
+
+}

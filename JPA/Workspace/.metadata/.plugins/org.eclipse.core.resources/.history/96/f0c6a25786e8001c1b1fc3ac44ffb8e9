@@ -1,0 +1,5 @@
+package com.morningstar.entities;
+
+public class Student {
+
+}
