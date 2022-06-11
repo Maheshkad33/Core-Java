@@ -1,0 +1,14 @@
+package com.morningstar;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class MonthsswitchcaseTest {
+
+	@Test
+	public void testMonth() {
+		fail("Not yet implemented");
+	}
+
+}

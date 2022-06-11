@@ -1,0 +1,14 @@
+package com.morningstar.service;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class OrderServiceImplTest {
+
+	@Test
+	public void testPlaceOrder() {
+		fail("Not yet implemented");
+	}
+
+}

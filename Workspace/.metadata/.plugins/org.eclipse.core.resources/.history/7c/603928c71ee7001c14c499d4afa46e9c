@@ -1,0 +1,93 @@
+package com.morningstar.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.morningstar.model.Employee;
+
+
+public class EmployeeDaoImpl implements EmployeeDao {
+	
+	private static Connection connection = null;
+
+	public static Connection getConnection() {
+		return connection;
+	}
+
+	static {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
+			connection.setAutoCommit(false);
+		} catch (ClassNotFoundException | SQLException e) {
+			System.out.println("There is Some Problem");
+			e.printStackTrace();// log the stack trace
+		}
+
+	}
+
+
+	@Override
+	public int addEmployee(Employee emp) throws SQLException {
+		
+		String sql = "Insert Into emptab (Employee_Id,Employee_Name,Employee_salary,Department_Id) values (?,?,?,?)";
+
+		PreparedStatement pstmt = connection.prepareStatement(sql);
+		pstmt.setInt(1, emp.getEmployeeId());
+		pstmt.setString(2, emp.getEmployeeName());
+		pstmt.setDouble(3, emp.getSalary());
+		pstmt.setInt(4, emp.getDepartmentId());
+
+		int result = pstmt.executeUpdate();
+		pstmt.close();
+		return result;
+	}
+
+	@Override
+	public List<Employee> readAllEmployees() throws SQLException {
+		String sql = "Select * from emptab";
+		Statement stmt = connection.createStatement();
+		ResultSet rs = stmt.executeQuery(sql);
+		List<Employee> list = new ArrayList<>();
+		while (rs.next()) {
+			int empId = rs.getInt("Employee_Id");
+			String emp_Name = rs.getString("Employee_Name");
+			double sal = rs.getDouble("Employee_salary");
+			int deptId = rs.getInt("Department_Id");
+			Employee employee  = new Employee(empId, emp_Name, sal, deptId);
+			list.add(employee);
+		}
+		return list;
+	}
+
+	@Override
+	public Employee findById(int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> findByName(String name) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int deleteEmployee(int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int updateEmployee(int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

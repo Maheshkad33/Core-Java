@@ -1,0 +1,17 @@
+package thread1;
+
+//thread is program in execution
+//ruunable interface contain only run () method only so it is functional interface
+public class Test3 implements Runnable {
+
+	@Override
+	public void run() {
+		System.out.println("Name of Thread: " + Thread.currentThread().getName());
+	}
+
+	public static void main(String[] args) {
+		Test3 obj =  new Test3();
+		obj.run();
+	}
+
+}

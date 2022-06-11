@@ -1,0 +1,14 @@
+package com.morningstar;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class StringManipulationTest {
+
+	@Test
+	public void testDoOperation() {
+		fail("Not yet implemented");
+	}
+
+}

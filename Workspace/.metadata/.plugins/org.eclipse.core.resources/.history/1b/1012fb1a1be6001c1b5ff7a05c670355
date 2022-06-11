@@ -1,0 +1,17 @@
+package thread3;
+
+public class SingleThreadedBank {
+
+	public static void main(String[] args) {
+		
+		Customer customer = new Customer("Mahesh","Kad");
+		Account account = new Account(1000);
+		
+		customer.setAccount(account);//setup relationship
+		
+		System.out.println(customer.getAccount());
+		
+
+	}
+
+}

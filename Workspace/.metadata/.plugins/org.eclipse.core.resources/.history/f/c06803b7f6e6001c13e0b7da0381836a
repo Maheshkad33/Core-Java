@@ -1,0 +1,5 @@
+package com.morningstar.dao;
+
+public interface StudentDao {
+	public void createStudent();
+}

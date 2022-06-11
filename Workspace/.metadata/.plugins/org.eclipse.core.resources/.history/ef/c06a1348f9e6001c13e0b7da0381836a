@@ -1,0 +1,36 @@
+package com.morningstar.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.morningstar.model.Student;
+
+public class StudentImpl implements StudentDao{
+
+	private static Connection connection = null;
+	
+	static {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			 connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
+	
+		} catch (ClassNotFoundException | SQLException e) {
+			System.out.println("There is Some Problem");
+			e.printStackTrace();//log the stack trace
+		}
+		
+	}
+	
+	@Override
+	public int createStudent(Student student) throws SQLException {
+		return 0;
+	}
+
+	@Override
+	public Student readStudent(int studentid) throws SQLException {
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,24 @@
+package com.morningstar.service;
+
+import com.morningstar.dao.StudentDao;
+import com.morningstar.model.Student;
+
+public class StudentServiceImpl implements StudentService{
+	
+	private StudentDao dao = null;
+	
+	
+
+	@Override
+	public boolean addStudent(Student student) {
+		
+		return false;
+	}
+
+	@Override
+	public Student findByStudenId(int studentid) {
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.morningstar.dao;
+
+import java.sql.SQLException;
+
+import com.morningstar.model.Student;
+
+public interface StudentDao {
+	public void createStudent(Student student) throws SQLException;
+	public Student readStudent(int studentid) throws SQLException;
+	
+}

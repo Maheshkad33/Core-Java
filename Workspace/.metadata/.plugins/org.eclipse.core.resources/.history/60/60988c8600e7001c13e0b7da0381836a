@@ -1,0 +1,15 @@
+package com.morningstar;
+
+import com.morningstar.model.Student;
+import com.morningstar.service.StudentService;
+import com.morningstar.service.StudentServiceImpl;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	StudentService service = new StudentServiceImpl();
+    	Student student = new Student(100,"Mahesh",95)
+    	
+    	service.addStudent(student);    }
+}

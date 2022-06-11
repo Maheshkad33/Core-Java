@@ -1,0 +1,20 @@
+package com.morningstar.dao;
+
+import java.sql.SQLException;
+
+import com.morningstar.model.Student;
+
+public class StudentImpl implements StudentDao{
+
+	@Override
+	public int createStudent(Student student) throws SQLException {
+		return 0;
+	}
+
+	@Override
+	public Student readStudent(int studentid) throws SQLException {
+		
+		return null;
+	}
+
+}

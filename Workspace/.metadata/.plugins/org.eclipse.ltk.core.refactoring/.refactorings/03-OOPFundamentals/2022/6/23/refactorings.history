@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;oop06.Base&apos; to &apos;Main&apos;&#x0D;&#x0A;- Original project: &apos;03-OOPFundamentals&apos;&#x0D;&#x0A;- Original element: &apos;oop06.Base&apos;&#x0D;&#x0A;- Renamed element: &apos;oop06.Main&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Base&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;oop06{Base.java[Base" matchStrategy="1" name="Main" qualified="false" references="true" similarDeclarations="false" stamp="1654058241691" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,9 @@
+create table EmpTAB(
+	Employee_Id Number(5) primary key,
+	Employee_Name Varchar2(50) not null,
+	Employee_salary Number(10),
+	Department_Id Number(5)
+);
+
+
+Insert Into EmpTab select Employee_Id,Last_Name,Salary,Department_Id from Employees;

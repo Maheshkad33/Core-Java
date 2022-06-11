@@ -1,0 +1,17 @@
+package lab5;
+
+import java.util.HashMap;
+
+public class PhoneBookHashMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		HashMap<String, Long> map = new HashMap<String, Long>();
+		
+		map.put("Mahesh", 9923948264);
+		
+
+	}
+
+}

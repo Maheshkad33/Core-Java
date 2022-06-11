@@ -1,0 +1,19 @@
+package com.morningstar;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CalculatorTest {
+
+	@Test
+	public void testAdditionShouldReturnSumOfTwoNumber() {
+		Calculator target = new Calculator();
+		int result = target.addition(1000, 2000);
+		assertEquals(3000, result);
+		assertEquals(12000, target.addition(1000, 200));
+		assertEquals(12000, target.addition(1100, 100));
+		assertEquals(1200, target.addition(1200, 0));
+	}
+
+}

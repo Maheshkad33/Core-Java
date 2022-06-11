@@ -1,0 +1,53 @@
+package com.morningstar;
+
+import java.util.Scanner;
+
+import com.morningstar.dao.EmployeeDao;
+import com.morningstar.dao.EmployeeDaoImpl;
+import com.morningstar.model.Employee;
+import com.morningstar.service.EmployeeServiceImpl;
+
+public class App {
+
+	public static Employee addEmployee() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter EmployeeId: ");
+		int id = sc.nextInt();
+		System.out.println("Enter EmployeeName: ");
+		String name = sc.next();
+		System.out.println("Enter Salary: ");
+		double sal = sc.nextDouble();
+		System.out.println("Enter DepartmentId: ");
+		int deptid = sc.nextInt();
+		Employee emp = new Employee(id, name, sal, deptid);
+		return emp;
+	}
+
+	public static void main(String[] args) {
+		EmployeeServiceImpl service = new EmployeeServiceImpl();
+		EmployeeDao employeeDao = new EmployeeDaoImpl();
+		service.setDao(employeeDao);
+
+		System.out.println("Welcome To Employee Management");
+		System.out.println("1.Add Employee \n " + "2.Read All Employees\n" + "3.Find by Id\n" + "4.Find By Name\n"
+				+ "5.Delete Employee\n" + "6.Update Employee\n");
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your choice:");
+		int choice = sc.nextInt();
+
+		switch (choice) {
+		case 1: {
+			boolean result = service.addEmployee(addEmployee());
+			if (result)
+				System.out.println("Student is added into databse");
+			else
+				System.out.println("Student is not added in database");
+			break;
+
+		}
+		default:System.out.println("Enter valid choice");
+		}
+
+	}
+}

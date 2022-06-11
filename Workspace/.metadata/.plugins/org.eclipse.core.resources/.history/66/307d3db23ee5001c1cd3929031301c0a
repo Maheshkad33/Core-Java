@@ -1,0 +1,12 @@
+package lambda2;
+
+public class AvgTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Avg ref1 = (A[])->{
+
+	}
+
+}

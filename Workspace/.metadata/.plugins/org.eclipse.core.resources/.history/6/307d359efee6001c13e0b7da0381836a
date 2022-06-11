@@ -1,0 +1,39 @@
+package com.morningstar.service;
+
+import java.sql.SQLException;
+
+import com.morningstar.dao.StudentDao;
+import com.morningstar.model.Student;
+
+public class StudentServiceImpl implements StudentService{
+	
+	private StudentDao dao = null;
+	
+	public StudentDao getDao() {
+		return dao;
+	}
+
+	public void setDao(StudentDao dao) {
+		this.dao = dao;
+	}
+
+	@Override
+	public boolean addStudent(Student student) {
+		try {
+			int result = dao.createStudent(student);
+			if(result >=1)
+				return true;
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	@Override
+	public Student findByStudenId(int studentid) {
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.morningstar;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class StringManipulationTest {
+	
+	 StringManipulation target = null;
+	
+	@Before
+	public void setup() {
+		target = new StringManipulation();
+	}
+	
+	@After
+	public void teardown() {
+		target=null;
+	}
+
+	@Test
+	public void testDoOperation() {
+		assertEquals(null,target.doOperation("Mahesh","Akshay","Ankita"));
+	}
+	
+	@public void testDoOperation1() {
+		assertEquals(mahesh3.0kad, target.doOperation1("Mahesh1", 3.0, "kad"));
+	}
+
+}

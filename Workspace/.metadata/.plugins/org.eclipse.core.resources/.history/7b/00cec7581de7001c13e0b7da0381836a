@@ -1,0 +1,83 @@
+package com.morningstar.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.morningstar.dao.EmployeeDao;
+import com.morningstar.dao.EmployeeDaoImpl;
+
+import com.morningstar.model.Employee;
+import com.morningstar.model.Student;
+
+public class EmployeeServiceImpl implements EmployeeService{
+	
+	private EmployeeDao  dao = null;
+		
+
+	public EmployeeDao getDao() {
+		return dao;
+	}
+
+	public void setDao(EmployeeDao dao) {
+		this.dao = dao;
+	}
+
+	@Override
+	public boolean addEmployee(Employee emp) {
+		
+		try {
+			int result = dao.addEmployee(emp);
+			if (result >= 1) {
+				EmployeeDaoImpl.getConnection().commit();
+				return true;
+			}
+
+		} catch (SQLException e) {
+			try {
+				EmployeeDaoImpl.getConnection().rollback();
+			} catch (SQLException e2) {
+				e2.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	@Override
+	public List<Employee> readAllEmployees() {
+		
+		List<Employee> list = null;
+		try {
+			 list = dao.readAllEmployees();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	@Override
+	public Employee findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> findByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteEmployees(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateEmployee(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,42 @@
+package thread3;
+
+class WithdrawalTask implements Runnable {
+
+	private Customer customer;
+
+	WithdrawalTask(Customer customer) {
+		this.customer = customer;
+	}
+
+	@Override
+	public void run() {
+
+	}
+
+}
+
+public class MultiThreadedBank {
+
+	public static void main(String[] args) {
+
+		Customer customer = new Customer("Mahesh", "Kad");
+		Account account = new Account(1000);
+
+		customer.setAccount(account);// setup relationship
+
+		System.out.println("Initial Balance: " + customer.getAccount().getBalance());
+
+		account.deposite(5000);
+
+		// System.out.println("Balance after deposit: " +
+		// customer.getAccount().getBalance());
+
+		System.out.println("Balance after deposit: " + account.getBalance());
+
+		WithdrawalTask task = new WithdrawalTask(customer);
+		
+		Thread t1 = new Thread(task);
+
+	}
+
+}

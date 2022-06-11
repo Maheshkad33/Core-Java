@@ -1,0 +1,10 @@
+package lab5;
+
+public class Employee1 {
+	
+	private int empCode;
+	private String name;
+	private String address;
+	private double salary;
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\MorningStar\Training\Core Java\Workspace\LayeredAppFundamentalsLab"/>
+			<item value="D:\MorningStar\Training\Core Java\Workspace\13-LayeredAppFundamentals"/>
+			<item value="D:\MorningStar\Training\Core Java\Workspace\12-JDBCFundamentals"/>
+			<item value="D:\MorningStar\Training\Core Java\Workspace\11_MockitoFundamentals"/>
+			<item value="D:\MorningStar\Training\Core Java\Workspace\11_MavenTestLab"/>
+			<item value="D:\MorningStar\Training\Core Java\Workspace\10_MavenFundamentals"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

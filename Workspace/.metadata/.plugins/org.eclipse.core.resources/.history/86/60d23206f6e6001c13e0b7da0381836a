@@ -1,0 +1,5 @@
+package com.morningstar.model;
+
+public class Student {
+
+}

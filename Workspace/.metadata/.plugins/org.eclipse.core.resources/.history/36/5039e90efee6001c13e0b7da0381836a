@@ -1,0 +1,5 @@
+package com.morningstar.service;
+
+public class StudentServiceImpl {
+
+}

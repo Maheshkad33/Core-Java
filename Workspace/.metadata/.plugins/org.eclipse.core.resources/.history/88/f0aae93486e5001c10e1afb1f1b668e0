@@ -1,0 +1,38 @@
+package com.morningstar;
+import java.util.Scanner;
+
+public class Traffic {
+	
+	
+
+	public static String main(String args) {
+	
+		
+		String color = args.toLowerCase();		
+		
+		switch (color) {
+		
+		case "red":
+		{
+			
+			return "Stop";
+		}
+		case "green":
+		{
+			
+			return "Go";
+		}
+		case "yellow":
+		{
+			
+			return "Ready";
+		}
+		 default:{
+		
+			 return null;
+		}
+		}
+
+	}
+
+}

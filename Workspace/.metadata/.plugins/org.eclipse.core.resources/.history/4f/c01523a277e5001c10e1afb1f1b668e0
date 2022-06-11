@@ -1,0 +1,29 @@
+package com.morningstar;
+
+public class StringManipulation {
+	
+	//1. The method doOperation should accept 3 arguments
+	//2. First & last argument should be string
+	//3. Second argument should be operator
+	//4. doOperation("Morningstar", "+", "India") => then it should return MorningstarIndia
+	//5. doOperation("HelloWorld", "-", "World") => then it should return Hello
+	//6. doOperation("Morningstar", "-", "India") => then it should return Morningstar
+	//7. doOperation("Morningstar", "*", "India") => then it should throw IllegalArgumentException
+
+	//TDD-Test Driven Development
+	//RED-REFACTOR - GREEN
+	public String doOperation(String name1,String name2,String name3)
+	{
+		return null;
+	}
+	
+	public boolean doOperation1(String name1,double number,String name3)
+	{
+		int a = name1.length() + name3.length();
+		if (a>1)
+		return true;
+	}
+	
+	
+
+}
